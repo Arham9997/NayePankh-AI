@@ -1,0 +1,1341 @@
+/* ===================================
+   GOOGLE FONTS
+=================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ===================================
+   ROOT VARIABLES
+=================================== */
+
+:root{
+
+    --primary:#7C3AED;
+    --secondary:#111827;
+    --accent:#F59E0B;
+
+    --white:#ffffff;
+
+    --bg:#F8FAFC;
+
+    --text-dark:#1F2937;
+    --text-light:#6B7280;
+
+    --glass:rgba(255,255,255,.12);
+
+    --border:rgba(255,255,255,.18);
+
+    --shadow:
+    0 20px 40px rgba(0,0,0,.08);
+
+    --transition:.4s ease;
+
+}
+
+/* ===================================
+   RESET
+=================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text-dark);
+
+    overflow-x:hidden;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+/* ===================================
+   REUSABLE CLASSES
+=================================== */
+
+.section{
+
+    padding:120px 8%;
+
+}
+
+.section-heading{
+
+    text-align:center;
+
+    max-width:800px;
+
+    margin:auto auto 70px;
+
+}
+
+.section-heading h2{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+    font-weight:800;
+
+}
+
+.section-heading p{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+    font-size:1.05rem;
+
+}
+
+.btn-primary{
+
+    display:inline-block;
+
+    padding:16px 38px;
+
+    background:
+    linear-gradient(
+    135deg,
+    var(--primary),
+    #a855f7
+    );
+
+    color:white;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.btn-secondary{
+
+    display:inline-block;
+
+    padding:16px 38px;
+
+    border:2px solid white;
+
+    color:white;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn-secondary:hover{
+
+    background:white;
+
+    color:var(--primary);
+
+}
+
+/* ===================================
+   HEADER
+=================================== */
+
+.header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    padding:20px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(17,24,39,.85);
+
+    backdrop-filter:blur(12px);
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.logo img{
+
+    width:45px;
+
+}
+
+.logo span{
+
+    color:white;
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+}
+
+.navbar{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+.navbar a{
+
+    color:white;
+
+    font-weight:500;
+
+    transition:var(--transition);
+
+}
+
+.navbar a:hover{
+
+    color:var(--accent);
+
+}
+
+.navbar a.active{
+
+    color:var(--accent);
+
+    font-weight:700;
+
+    position:relative;
+
+}
+
+.navbar a.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:100%;
+
+    height:3px;
+
+    border-radius:10px;
+
+    background:var(--accent);
+
+}
+
+.dark-toggle{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+}
+
+/* ===================================
+   HERO
+=================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    padding:150px 8% 80px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:60px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #7C3AED,
+    #9333EA,
+    #F59E0B
+    );
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    top:-120px;
+    right:-120px;
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero-content h1{
+
+    color:white;
+
+    font-size:4rem;
+
+    line-height:1.15;
+
+    margin-bottom:25px;
+
+    font-weight:800;
+
+}
+
+.hero-content p{
+
+    color:rgba(255,255,255,.9);
+
+    line-height:1.9;
+
+    margin-bottom:40px;
+
+    font-size:1.05rem;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-image{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero-image img{
+
+    width:100%;
+
+    max-width:650px;
+
+    margin:auto;
+
+    border-radius:30px;
+
+    box-shadow:
+    0 30px 60px rgba(0,0,0,.25);
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* ===================================
+   ABOUT AI
+=================================== */
+
+.about{
+
+    background:white;
+
+}
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.about-card{
+
+    background:white;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.about-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.about-card i{
+
+    width:80px;
+
+    height:80px;
+
+    line-height:80px;
+
+    border-radius:50%;
+
+    font-size:2rem;
+
+    color:white;
+
+    background:
+    linear-gradient(
+    135deg,
+    var(--primary),
+    var(--accent)
+    );
+
+    margin-bottom:25px;
+
+}
+
+.about-card h3{
+
+    margin-bottom:15px;
+
+    font-size:1.3rem;
+
+}
+
+.about-card p{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+}
+
+/* ===================================
+   AI CHATBOT
+=================================== */
+
+.chatbot{
+
+    background:#f8fafc;
+
+}
+
+.chat-container{
+
+    max-width:900px;
+
+    margin:auto;
+
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+}
+
+.chat-box{
+
+    height:450px;
+
+    overflow-y:auto;
+
+    padding:30px;
+
+    background:#ffffff;
+
+}
+
+.bot-message{
+
+    max-width:75%;
+
+    padding:15px 20px;
+
+    background:
+    linear-gradient(
+    135deg,
+    var(--primary),
+    #9333ea
+    );
+
+    color:white;
+
+    border-radius:18px;
+
+    margin-bottom:15px;
+
+    line-height:1.7;
+
+}
+
+.user-message{
+
+    max-width:75%;
+
+    margin-left:auto;
+
+    padding:15px 20px;
+
+    background:#e5e7eb;
+
+    color:var(--text-dark);
+
+    border-radius:18px;
+
+    margin-bottom:15px;
+
+}
+
+.chat-input{
+
+    display:flex;
+
+    gap:15px;
+
+    padding:20px;
+
+    border-top:
+    1px solid #e5e7eb;
+
+}
+
+.chat-input input{
+
+    flex:1;
+
+    padding:16px 20px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:50px;
+
+    background:#f1f5f9;
+
+}
+
+.chat-input button{
+
+    padding:16px 35px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:50px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.chat-input button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ===================================
+   VOLUNTEER RECOMMENDER
+=================================== */
+
+.volunteer{
+
+    background:white;
+
+}
+
+.volunteer-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+    margin-bottom:40px;
+
+}
+
+.role-btn{
+
+    padding:20px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:white;
+
+    box-shadow:var(--shadow);
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.role-btn:hover{
+
+    transform:translateY(-8px);
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.result-card{
+
+    max-width:850px;
+
+    margin:auto;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+    135deg,
+    rgba(124,58,237,.08),
+    rgba(245,158,11,.08)
+    );
+
+    border:
+    1px solid rgba(124,58,237,.15);
+
+    text-align:center;
+
+    line-height:1.8;
+
+    font-size:1.05rem;
+
+}
+
+/* ===================================
+   NGO PROGRAM MATCHER
+=================================== */
+
+.matcher{
+
+    background:#f8fafc;
+
+}
+
+.program-options{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+    margin-bottom:40px;
+
+}
+
+.program-btn{
+
+    padding:20px;
+
+    border:none;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    background:white;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.program-btn:hover{
+
+    background:var(--accent);
+
+    color:white;
+
+    transform:translateY(-8px);
+
+}
+
+/* ===================================
+   AWARENESS GENERATOR
+=================================== */
+
+.awareness{
+
+    background:white;
+
+}
+
+.generator-box{
+
+    max-width:900px;
+
+    margin:auto;
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.generator-box input{
+
+    flex:1;
+
+    min-width:300px;
+
+    padding:18px 22px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:50px;
+
+    background:#f1f5f9;
+
+    font-size:1rem;
+
+}
+
+.generator-box button{
+
+    padding:18px 40px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+    135deg,
+    var(--primary),
+    #9333ea
+    );
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.generator-box button:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.generated-content{
+
+    max-width:900px;
+
+    margin:40px auto 0;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:
+    rgba(255,255,255,.7);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:var(--shadow);
+
+    line-height:1.9;
+
+    min-height:180px;
+
+    color:var(--text-dark);
+
+}
+
+/* ===================================
+   GLASS EFFECT
+=================================== */
+
+.glass{
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(15px);
+
+    border:
+    1px solid rgba(255,255,255,.2);
+
+}
+
+/* ===================================
+   IMPACT DASHBOARD
+=================================== */
+
+.impact{
+
+    background:#f8fafc;
+
+}
+
+.impact-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.impact-card{
+
+    background:white;
+
+    padding:40px 25px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.impact-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.impact-card h3{
+
+    font-size:2.8rem;
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+    font-weight:800;
+
+}
+
+.impact-card p{
+
+    color:var(--text-light);
+
+}
+
+/* ===================================
+   CONTACT
+=================================== */
+
+.contact{
+
+    background:white;
+
+}
+
+.contact-container{
+
+    max-width:1000px;
+
+    margin:auto;
+
+}
+
+.contact-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    padding:18px 22px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+
+    background:#f1f5f9;
+
+    font-family:inherit;
+
+}
+
+.contact-form textarea{
+
+    resize:none;
+
+}
+
+.contact-form button{
+
+    background:
+    linear-gradient(
+    135deg,
+    var(--primary),
+    #9333ea
+    );
+
+    color:white;
+
+    border:none;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.contact-form button:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* ===================================
+   FOOTER
+=================================== */
+
+.footer{
+
+    background:#111827;
+
+    color:white;
+
+}
+
+.footer-grid{
+
+    padding:80px 8%;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:40px;
+
+}
+
+.footer-grid h4{
+
+    margin-bottom:20px;
+
+    font-size:1.2rem;
+
+}
+
+.footer-grid p{
+
+    color:#cbd5e1;
+
+    margin-bottom:12px;
+
+    line-height:1.8;
+
+}
+
+.footer-grid a{
+
+    color:#cbd5e1;
+
+    text-decoration:none;
+
+    transition:var(--transition);
+
+}
+
+.footer-grid a:hover{
+
+    color:var(--accent);
+
+}
+
+.footer-bottom{
+
+    text-align:center;
+
+    padding:25px;
+
+    border-top:
+    1px solid rgba(255,255,255,.1);
+
+}
+
+.footer-bottom p{
+
+    color:#94a3b8;
+
+    margin:6px 0;
+
+}
+
+/* ===================================
+   DARK MODE
+=================================== */
+
+body.dark{
+
+    background:#0f172a;
+
+    color:white;
+
+}
+
+body.dark .about,
+body.dark .volunteer,
+body.dark .awareness,
+body.dark .contact{
+
+    background:#111827;
+
+}
+
+body.dark .matcher,
+body.dark .impact,
+body.dark .chatbot{
+
+    background:#0f172a;
+
+}
+
+body.dark .about-card,
+body.dark .impact-card,
+body.dark .role-btn,
+body.dark .program-btn,
+body.dark .chat-container{
+
+    background:#1e293b;
+
+    color:white;
+
+}
+
+body.dark .generated-content,
+body.dark .result-card{
+
+    background:#1e293b;
+
+    color:white;
+
+}
+
+body.dark .contact-form input,
+body.dark .contact-form textarea,
+body.dark .chat-input input{
+
+    background:#334155;
+
+    color:white;
+
+}
+
+body.dark .section-heading p,
+body.dark .about-card p,
+body.dark .impact-card p{
+
+    color:#cbd5e1;
+
+}
+
+/* ===================================
+   SCROLL ANIMATION
+=================================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:all .8s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ===================================
+   MOBILE RESPONSIVE
+=================================== */
+
+@media(max-width:992px){
+
+    .hero{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .hero-image{
+
+        order:-1;
+
+    }
+
+    .impact-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .header{
+
+        padding:15px 5%;
+
+    }
+
+    .navbar{
+
+        display:none;
+
+    }
+
+    .hero{
+
+        padding:140px 5% 80px;
+
+    }
+
+    .section{
+
+        padding:90px 5%;
+
+    }
+
+    .hero-content h1{
+
+        font-size:2.8rem;
+
+    }
+
+    .section-heading h2{
+
+        font-size:2.2rem;
+
+    }
+
+    .generator-box{
+
+        flex-direction:column;
+
+    }
+
+    .chat-input{
+
+        flex-direction:column;
+
+    }
+
+    .impact-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .hero-content h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .section-heading h2{
+
+        font-size:1.8rem;
+
+    }
+
+    .impact-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .footer-grid{
+
+        text-align:center;
+
+    }
+
+}
